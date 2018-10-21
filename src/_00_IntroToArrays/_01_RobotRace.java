@@ -17,7 +17,7 @@ public class _01_RobotRace {
 		// 9. make the robots race around a circular track.
 		circularRace(20);
 	}
-	
+
 	public static void straightRace(int robots) {
 		Robot[] bonsai = new Robot[robots];
 		// 3. use a for loop to initialize the robots.
@@ -53,7 +53,7 @@ public class _01_RobotRace {
 			r.unSparkle();
 		}
 	}
-	
+
 	public static void circularRace(int robots) {
 		Robot[] bonsai = new Robot[robots];
 		int[] turned = new int[robots];
@@ -75,11 +75,11 @@ public class _01_RobotRace {
 				if (bonsai[i].getY() <= 100 && bonsai[i].getX() < 500 && turned[i] == 0
 						|| bonsai[i].getY() <= 100 && bonsai[i].getX() >= 500 && turned[i] == 1
 						|| bonsai[i].getY() >= 500 && bonsai[i].getX() >= 500 && turned[i] == 2
-|| bonsai[i].getY() >= 500 && bonsai[i].getX() <= 100 && turned[i] == 3) {
+						|| bonsai[i].getY() >= 500 && bonsai[i].getX() <= 100 && turned[i] == 3) {
 					bonsai[i].turn(90);
 					turned[i]++;
 				}
-				
+
 				if (turned[i] == 4) {
 					bonsai[i].sparkle();
 					winner = i;
